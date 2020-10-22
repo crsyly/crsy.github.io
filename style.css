@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #161616;
+    text-align: center;
+    padding-top: 50px;
+}
+
+section {
+    padding-left: 50px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 55pt;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 1s;
+}
+
+#hand {
+    animation: hand 6s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    opacity: 100%;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+div {
+    text-align: left;
+    inline-size: 610px;
+    transition: all 0.3s;
+    padding-top: 50px;
+}
+
+#hand:hover {
+    opacity: 50%;
+    cursor: help;
+}
+
+@keyframes hand{
+    from{
+        transform: rotateZ(-3deg);
+    }
+    to{
+        transform: rotateZ(1deg);
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+}
+
+.herbal {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 170px;
+    padding-left: 40px;
+    color: white;
+    max-width: 610px;
+    max-height: 700px;
+    font-size: 23px;
+    font-family: serif;
+    word-spacing: 5px;
+    word-break: normal;
+}
+
+.lorem {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 120px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: white;
+    max-width: 600px;
+    max-height: 700px;
+    font-size: 23px;
+    font-family: serif;
+    word-spacing: 5px;
+    word-break: normal;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a.left
+{
+    position: relative;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
